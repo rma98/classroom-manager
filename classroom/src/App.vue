@@ -10,7 +10,9 @@
   </ul>
   <!-- <a v-bind:href="link">Google search</a> -->
    <a :href="link">Google Search</a>
-   <button v-on:click="toogleStatus">change Status</button>
+   <!-- <button v-on:click="toogleStatus">change Status</button> -->
+    <br>
+   <button @click="toogleStatus">change Status</button>
 </template>
 
 <script>
