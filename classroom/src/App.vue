@@ -16,31 +16,33 @@
 </template>
 
 <script>
-  export default{
-    data (){
-      return{
-        name: "Vagner Alves",
-        status: 'pending',
-        task: ['task one', 'task two', 'task three'],
-        link: 'https://www.google.com'
+import {ref} from 'vue';
+   export default{
+    setup(){
+      const name = ref("Vagner Alves");
+      const status = ref ('pending');
+      const task =  ref(['task one', 'task two', 'task three']);
 
-      };
-    },
-
-    methods: {
-      toogleStatus(){
-        if (this.status === 'active'){
-          this.status = 'pending'
+      const toogleStatus = () => {
+        if ( status.value === 'active'){
+          status.value = 'pending'
         }
 
-        else if (this.status === 'pending'){
-          this.status = 'inactive'
+        else if (status.value === 'pending'){
+          status.value = 'inactive'
         }
 
         else {
-          this.status = 'active'
+          status.value = 'active'
         }
-      }
-    }
-  }  
+      };
+      return{
+        name,
+        status,
+        task,
+        toogleStatus,
+      }; 
+    },
+   }
+    
 </script>
