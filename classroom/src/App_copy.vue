@@ -44,4 +44,49 @@
       }
     }  
   </script>
-  
+
+<script>
+import {onMounted, ref} from 'vue';
+
+const name = ref("Vagner Alves");
+const status = ref ('pending');
+const tasks =  ref(['task one', 'task two', 'task three']);
+const newTask =  ref('')
+
+const toogleStatus = () => {
+    if ( status.value === 'active'){
+        status.value = 'pending'
+      }
+
+    else if (status.value === 'pending'){
+        status.value = 'inactive'
+      }
+
+    else {
+        status.value = 'active'
+      }
+    };
+
+const addTask = () => {
+  if (newTask.value.trim() !== ''){
+    tasks.value.push(newTask.value);
+    newTask.value = '';
+  }
+}
+
+const deleteTask = (index) =>{
+  tasks.value.splice(index,1);
+}
+
+onMounted( async () =>{
+  try{
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const data =  await response.json();
+    tasks.value = data.map((tasks) => tasks.title);
+
+  }
+  catch(error){
+    console.log('error fetching the data.');
+  }
+});
+</script>
