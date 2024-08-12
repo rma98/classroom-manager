@@ -17,6 +17,7 @@
       <button @click="deleteTask(index)">x</button>
     </li>
   </ul>
+
   <!-- <a v-bind:href="link">Google search</a> -->
    <a :href="link">Google Search</a>
    <!-- <button v-on:click="toogleStatus">change Status</button> -->
@@ -51,5 +52,9 @@ const addTask = () => {
     tasks.value.push(newTask.value);
     newTask.value = '';
   }
+}
+
+const deleteTask = (index) =>{
+  tasks.value.splice(index,1);
 }
 </script>
