@@ -10,7 +10,7 @@
   </ul>
   <!-- <a v-bind:href="link">Google search</a> -->
    <a :href="link">Google Search</a>
-   <button v-on:click="toogleStatus">Botão Status</button>
+   <button v-on:click="toogleStatus">change Status</button>
 </template>
 
 <script>
@@ -24,5 +24,21 @@
 
       };
     },
+
+    methods: {
+      toogleStatus(){
+        if (this.status === 'active'){
+          this.status = 'pending'
+        }
+
+        else if (this.status === 'pending'){
+          this.status = 'inactive'
+        }
+
+        else {
+          this.status = 'active'
+        }
+      }
+    }
   }  
 </script>
