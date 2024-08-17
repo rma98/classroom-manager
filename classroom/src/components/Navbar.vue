@@ -36,6 +36,11 @@
                   to="/jobs/add"
                   :class="[isActiveLink('/jobs/add') ? 'bg-green-900':'hover:bg-grey-900 hover:text-blue', 'text-white','px-3','py-2','rounded-md']"
                   >Add Jobs</RouterLink>
+
+                  <RouterLink
+                  to="/jobs/login"
+                  :class="[isActiveLink('/jobs/login') ? 'bg-green-900':'hover:bg-grey-900 hover:text-blue', 'text-white','px-3','py-2','rounded-md']"
+                  >login</RouterLink>
                 
               </div>
             </div>
