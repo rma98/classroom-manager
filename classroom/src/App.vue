@@ -10,5 +10,6 @@
   <Navbar/>
   <Hero title="IFPE - Palmares" subtitle="veja as salas disponiveis abaixo"/>
   <Homecards/>
-  <JobListings/>
+  <JobListings :limit="3" :show-button="true"/>
+
 </template>
