@@ -17,7 +17,7 @@ import { RouterLink } from 'vue-router';
           >
           <input
             id="identity"
-            class="shadow appearance-none borderrounded w-full py-2 px-3 text-white mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none borderrounded w-full py-2 px-3 text-green-900 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Email"
             aria-describedby="emailHelp"
@@ -37,7 +37,7 @@ import { RouterLink } from 'vue-router';
             aria-describedby="passwordHelp"
             v-model="password"
 
-            class="shadow appearance-none borderrounded w-full py-2 px-3 text-white mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-none borderrounded w-full py-2 px-3 text-green-900 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
             placeholder="*******"
