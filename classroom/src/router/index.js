@@ -21,11 +21,9 @@ const router = createRouter({
         },
 
         {
-            paht: '/jobs/:id',
+            path: '/jobs/:id',
             name: 'job',
             component: JobView
-
-            
         },
         
         {
@@ -38,7 +36,7 @@ const router = createRouter({
             path:'/:catchAll(.*)',
             name: 'not-found',
             component: NotFoundView,
-        },
+        }
 
     ],
 
