@@ -18,6 +18,12 @@ const router = createRouter({
             name: 'jobs',
             component: JobsView
         },
+        
+        {
+            path: '/login',
+            name: 'login',
+            component: LoginView,
+        },
 
         {
             path:'/:catchAll(.*)',
@@ -25,11 +31,6 @@ const router = createRouter({
             component: NotFoundView,
         },
 
-        {
-            path: '/login',
-            name: 'login',
-            component: LoginView,
-        }
     ],
 
 });
