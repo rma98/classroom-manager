@@ -1,10 +1,8 @@
 <script setup>
     import { RouterLink  } from 'vue-router';
     import JobListing from './JobListing.vue';
-    import JobData from '@/jobs.json';
-    import {ref, defineProps} from 'vue';
+    import {ref, defineProps, onMounted} from 'vue';
 
-    const jobs = ref(JobData);
 
     defineProps({
         limit: Number,
@@ -14,6 +12,7 @@
         }
     });
     
+    const jobs = ref([]);
 </script>
 
 <template>
