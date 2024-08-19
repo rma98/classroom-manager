@@ -1,7 +1,9 @@
 <script setup>
     import { RouterLink  } from 'vue-router';
     import JobListing from './JobListing.vue';
-    import {ref, defineProps, onMounted} from 'vue';
+    import {reactive, defineProps, onMounted} from 'vue';
+    import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
+    import axios from 'axios';
 
 
     defineProps({
@@ -12,7 +14,21 @@
         }
     });
     
-    const jobs = ref([]);
+    const state = reactive({
+        jobs: [],
+        isLoading: true
+    });
+
+    onMounted(async () => {
+        try {
+           const response = await axios.get('http://localhost:5000/jobs');
+            state.jobs = response.data;
+        } catch (error) {
+            console.error('Error Fetching the data', error);
+        } finally {
+            state.isLoading =  false;
+        }
+    });
 </script>
 
 <template>
@@ -21,11 +37,18 @@
             <h2 class="text-3xl font-bold text-green-500 mb-6 text-center"> browser jobs</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <JobListing v-for="job in jobs.slice(0, limit || jobs.length)" :key="job.id":job="job"/>
+          <!-- Show loading spinner while loading is true -->
+      <div v-if="state.isLoading" class="text-center text-gray-500 py-6">
+        <PulseLoader />
+      </div>
+
+        <!-- Shoe job listing when done loading -->
+
+        <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <JobListing v-for="job in state.jobs.slice(0, limit || state.jobs.length)" :key="job.id":job="job"/>
             <!-- <div v-for="job in jobs" :key="job.id">{{ job.title }}</div> -->    
         </div>
-    </section>   
+    </section>
 
     <section v-if="showButton" class="m-auto max-w-lg my-10 px-6">
       <RouterLink
