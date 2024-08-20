@@ -1,7 +1,26 @@
-<script setup></script>
+<script setup>
+    import { reactive } from 'vue';
+
+    const form = reactive({
+        type: 'Part-time',
+        title: '',
+        description: '',
+        salary: '',
+        location: '',
+        company: {
+            name: '',
+            description: '',
+            contactEmail: '',
+            contactPhone: '',
+
+        }
+
+    })
+</script>
 
 <template>
-    <section class="bg-green-50">
+
+    <section class="bg-green-50 ">
       <div class="container m-auto max-w-2xl py-24">
         <div
           class="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
@@ -14,6 +33,7 @@
                 >Job Type</label
               >
               <select
+                v-model="form.type"
                 id="type"
                 name="type"
                 class="border rounded w-full py-2 px-3"
@@ -32,6 +52,7 @@
               >
               <input
                 type="text"
+                v-model="form.title"
                 id="name"
                 name="name"
                 class="border rounded w-full py-2 px-3 mb-2"
@@ -47,6 +68,7 @@
               >
               <textarea
                 id="description"
+                v-model="form.description"
                 name="description"
                 class="border rounded w-full py-2 px-3"
                 rows="4"
@@ -60,6 +82,7 @@
               >
               <select
                 id="salary"
+                v-model="form.salary"
                 name="salary"
                 class="border rounded w-full py-2 px-3"
                 required
@@ -84,6 +107,7 @@
               </label>
               <input
                 type="text"
+                v-model="form.location"
                 id="location"
                 name="location"
                 class="border rounded w-full py-2 px-3 mb-2"
@@ -164,5 +188,4 @@
         </div>
       </div>
     </section>
-
 </template>
