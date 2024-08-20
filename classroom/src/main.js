@@ -1,5 +1,7 @@
 import './assets/main.css'
 import 'primeicons/primeicons.css'
+import Toast from 'vue-toastification'
+import 'vue-toastification/dist/index.cjs'
 import router from './router'
 
 import { createApp } from 'vue'
