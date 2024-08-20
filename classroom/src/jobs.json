@@ -85,34 +85,6 @@
       }
     },
     {
-      "id": "2ae2",
-      "title": "Laboratório 9",
-      "type": "Full-Time",
-      "description": "Lab dedicado a primeira ( e melhor ) sala do ensino superior do IFPE- Campus Palmares",
-      "salary": "Over $200K",
-      "location": "Campus -  Palmares",
-      "company": {
-        "name": "Faculdade",
-        "description": "Ensino superior e tal. ",
-        "contactEmail": "IFPE@gmail.com",
-        "contactPhone": "xxx"
-      }
-    },
-    {
-      "id": "9041",
-      "title": "meu primeiro emprego dev",
-      "type": "Remote",
-      "description": "devops aws",
-      "salary": "$80K - $90K",
-      "location": "new york",
-      "company": {
-        "name": "best company in the world",
-        "description": "big ass salary",
-        "contactEmail": "dollar@gmail.com",
-        "contactPhone": "88888"
-      }
-    },
-    {
       "id": "596c",
       "title": "aws intern",
       "type": "Internship",
