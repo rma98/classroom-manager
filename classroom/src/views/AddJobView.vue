@@ -1,5 +1,7 @@
 <script setup>
     import { reactive } from 'vue';
+    import router from '@/router';
+    import axios from 'axios';
 
     const form = reactive({
         type: 'Part-time',
@@ -15,7 +17,33 @@
 
         }
 
-    })
+    });
+
+    const handleSubmmit = async()=>{
+        const newJob = {
+            title: form.title,
+            type: form.type,
+            description: form.description,
+            salary: form.salary,
+            location: form.location,
+            company: {
+                name: form.company.name,
+                description: form.company.description,
+                contactEmail: form.company.contactEmail,
+                contactPhone: form.company.contactPhone
+            }
+        }
+
+    
+        try {
+           const response = await axios.post(`/api/jobs`, newJob);
+           router.push(`/jobs/${response.data.id}`);
+        } catch (error) {
+            console.error('Error Fetching the data', error);
+        }
+    
+    };
+
 </script>
 
 <template>
@@ -25,7 +53,7 @@
         <div
           class="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
         >
-          <form>
+          <form @submit.prevent="handleSubmmit">
             <h2 class="text-3xl text-center font-semibold mb-6">Add Job</h2>
 
             <div class="mb-4">
@@ -124,6 +152,7 @@
               >
               <input
                 type="text"
+                v-model="form.company.name"
                 id="company"
                 name="company"
                 class="border rounded w-full py-2 px-3"
@@ -139,6 +168,7 @@
               >
               <textarea
                 id="company_description"
+                v-model="form.company.description"
                 name="company_description"
                 class="border rounded w-full py-2 px-3"
                 rows="4"
@@ -154,6 +184,7 @@
               >
               <input
                 type="email"
+                v-model="form.company.contactEmail"
                 id="contact_email"
                 name="contact_email"
                 class="border rounded w-full py-2 px-3"
@@ -169,6 +200,7 @@
               >
               <input
                 type="tel"
+                v-model="form.company.contactPhone"
                 id="contact_phone"
                 name="contact_phone"
                 class="border rounded w-full py-2 px-3"
