@@ -97,6 +97,34 @@
         "contactEmail": "IFPE@gmail.com",
         "contactPhone": "xxx"
       }
+    },
+    {
+      "id": "9041",
+      "title": "meu primeiro emprego dev",
+      "type": "Remote",
+      "description": "devops aws",
+      "salary": "$80K - $90K",
+      "location": "new york",
+      "company": {
+        "name": "best company in the world",
+        "description": "big ass salary",
+        "contactEmail": "dollar@gmail.com",
+        "contactPhone": "88888"
+      }
+    },
+    {
+      "id": "596c",
+      "title": "aws intern",
+      "type": "Internship",
+      "description": "huge ass salary",
+      "salary": "Over $200K",
+      "location": "riberao",
+      "company": {
+        "name": "xxxxxxx",
+        "description": "xxxxxxxxxx",
+        "contactEmail": "xxx@gmail.com",
+        "contactPhone": "xx"
+      }
     }
   ]
 }

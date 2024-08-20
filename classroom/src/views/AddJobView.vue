@@ -43,9 +43,11 @@
 
            toast.success('job added sucessfully');
            router.push(`/jobs/${response.data.id}`);
-           
+
         } catch (error) {
+
             console.error('Error Fetching the data', error);
+            toast.error('Job was not added')
         }
     
     };
@@ -215,7 +217,7 @@
             </div>
 
             <div>
-              <button
+              <button 
                 class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                 type="submit"
               >
