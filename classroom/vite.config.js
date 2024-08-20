@@ -12,7 +12,9 @@ export default defineConfig({
     port: 5000,
     proxy: {
       '/api':{
-        target:'http://localhost:5000/jobs'
+        target:'http://localhost:5000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
       }
     }
   },
