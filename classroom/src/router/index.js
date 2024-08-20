@@ -41,7 +41,7 @@ const router = createRouter({
         },
 
         {
-            path: '/jobs/edit:id',
+            path: '/jobs/edit/:id',
             name: 'edit-job',
             component: EditJobView
         },

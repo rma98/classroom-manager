@@ -33,7 +33,7 @@
     const toast = useToast();
 
     const handleSubmmit = async()=>{
-        const newJob = {
+        const updateJob = {
             title: form.title,
             type: form.type,
             description: form.description,
@@ -49,9 +49,9 @@
 
     
         try {
-           const response = await axios.post(`/api/jobs`, newJob);
+           const response = await axios.post(`/api/jobs/${jobId}`, uptadeJob);
 
-           toast.success('job added sucessfully');
+           toast.success('job updated sucessfully');
            router.push(`/jobs/${response.data.id}`);
 
         } catch (error) {
