@@ -49,7 +49,7 @@
 
     
         try {
-           const response = await axios.post(`/api/jobs/${jobId}`, uptadeJob);
+           const response = await axios.put(`/api/jobs/${jobId}`, updateJob);
 
            toast.success('job updated sucessfully');
            router.push(`/jobs/${response.data.id}`);
