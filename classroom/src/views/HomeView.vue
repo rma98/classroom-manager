@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <Hero title="IFPE - Palmares" subtitle="veja as salas disponiveis abaixo"/>
+    <Hero title="IFPE - Palmares" subtitle="Gerenciador de salas"/>
     <Homecards/>
     <JobListings :limit="3" :show-button="true"/>
 </template>

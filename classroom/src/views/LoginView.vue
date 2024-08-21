@@ -30,7 +30,7 @@ import { RouterLink } from 'vue-router';
           <label
             for="identity"
             class="block text-white text-sm font-bold mb-2"
-            >Password</label
+            >Senha</label
           >
 
           <input
@@ -57,7 +57,7 @@ import { RouterLink } from 'vue-router';
             class="inline-block align-baseline font-bold text-sm text-white hover:text-blue-800"
             href="#"
           >
-            Forgot Password?
+            Esqueceu a senha?
           </a>
         </div>
       </form>

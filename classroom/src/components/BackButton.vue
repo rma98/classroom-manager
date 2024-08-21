@@ -10,7 +10,7 @@ import { RouterLink } from 'vue-router';
           to="/jobs"
           class="text-green-500 hover:text-green-600 flex items-center"
         >
-          <i class="pi pi-arrow-circle-left mr-4"></i> Back to Job Listings
+          <i class="pi pi-arrow-circle-left mr-4"></i> Voltar para as salas.
         </RouterLink>
       </div>
     </section>

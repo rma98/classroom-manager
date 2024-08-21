@@ -34,7 +34,7 @@
 <template>
     <section class="bg-blue-50 px-4 py-10">
         <div class="container-xl lg:container m-auto">
-            <h2 class="text-3xl font-bold text-green-500 mb-6 text-center"> browser jobs</h2>
+            <h2 class="text-3xl font-bold text-green-500 mb-6 text-center"> Navegar pelas Salas</h2>
         </div>
 
           <!-- Show loading spinner while loading is true -->
@@ -54,7 +54,7 @@
       <RouterLink
         to="/jobs"
         class="block bg-black text-white text-center py-4 px-6 rounded-xl hover:bg-gray-700"
-        >View All Jobs</RouterLink>
+        >Visualizar tudo</RouterLink>
       
     </section>
 

@@ -19,7 +19,7 @@
             <RouterLink class="flex flex-shrink-0 items-center mr-4" to="/jobs">
               <img class="h-10 w-auto" :src="logo" alt="Vue Jobs" />
               <span class="hidden md:block text-white text-2xl font-bold ml-2"
-                >Vue Jobs</span
+                >Vue Js</span
               >
             </RouterLink>
             <div class="md:ml-auto">
@@ -27,15 +27,15 @@
                 <RouterLink
                   to="/"
                   :class="[isActiveLink('/') ? 'bg-green-900':'hover:bg-grey-900 hover:text-blue', 'text-white','px-3','py-2','rounded-md']"
-                  >Home</RouterLink>
+                  >Inicio</RouterLink>
                 <RouterLink
                   to="/jobs"
                   :class="[isActiveLink('/jobs') ? 'bg-green-900':'hover:bg-grey-900 hover:text-blue', 'text-white','px-3','py-2','rounded-md']"
-                  >Jobs</RouterLink>
+                  >Salas</RouterLink>
                   <RouterLink
                   to="/jobs/add"
                   :class="[isActiveLink('/jobs/add') ? 'bg-green-900':'hover:bg-grey-900 hover:text-blue', 'text-white','px-3','py-2','rounded-md']"
-                  >Add Jobs</RouterLink>
+                  >Adicionar</RouterLink>
 
                   <RouterLink
                   to="/login"
