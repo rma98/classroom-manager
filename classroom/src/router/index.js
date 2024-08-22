@@ -7,6 +7,7 @@ import LoginView from '@/views/LoginView.vue';
 import JobView from '@/views/JobView.vue';
 import AddJobView from '@/views/AddJobView.vue';
 import EditJobView from '@/views/EditJobView.vue';
+import RegisterView from '@/views/RegisterView.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,12 @@ const router = createRouter({
             path: '/login',
             name: 'login',
             component: LoginView,
+        },
+
+        {
+            path: '/register',
+            name: 'register',
+            component: RegisterView,
         },
 
         {
